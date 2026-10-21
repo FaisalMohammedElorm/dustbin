@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "DustBinAfrica",
+    "name": "DustBin Africa",
     "slug": "DustBinAfrica",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,11 +8,11 @@
     "scheme": "dustbinafrica",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "supportsTablet": false
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FFFFFF",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -20,7 +20,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "static",
+      "output": "single",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -28,9 +28,28 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#FFFFFF",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 180,
+          "dark": {
+            "backgroundColor": "#FFFFFF",
+            "image": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "DustBin Africa uses your location to pin your pickup address so collectors can find you."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "DustBin Africa uses the camera so collectors can photograph completed pickups as proof of collection.",
+          "photosPermission": "DustBin Africa needs photo access so collectors can attach a proof-of-collection photo.",
+          "microphonePermission": false
         }
       ]
     ],
